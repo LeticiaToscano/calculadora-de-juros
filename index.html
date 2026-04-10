@@ -130,34 +130,24 @@
       padding: 10px 0;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      font-weight: 700;
-      min-width: 0;
-    }
+ .brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
 
-    .brand-mark {
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 10px 22px rgba(37, 99, 235, 0.18);
-      color: #fff;
-      font-size: 18px;
-      flex-shrink: 0;
-    }
+.brand-logo img {
+  height: 42px;
+  width: auto;
+  display: block;
+}
 
-    .brand-text {
-      font-size: 1.05rem;
-      letter-spacing: -0.02em;
-      color: var(--text);
-      line-height: 1.2;
-    }
+@media (max-width: 560px) {
+  .brand-logo img {
+    height: 34px;
+  }
+}
 
     .nav {
       display: flex;
