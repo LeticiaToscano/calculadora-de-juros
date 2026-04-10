@@ -1121,6 +1121,49 @@
   body.dark-mode .eyebrow {
     display: none;
   }
+   /* ===== ANIMAÇÃO SUAVE E SEGURA ===== */
+@keyframes softFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* aplica só nos elementos principais */
+.hero-panel,
+.metric-card,
+.benefit-card,
+.calculator-card,
+.result-main,
+.result-breakdown,
+.chart-card,
+.table-card,
+.cta-box,
+details {
+  animation: softFadeUp 0.4s ease both;
+}
+
+/* hover leve */
+.metric-card,
+.benefit-card,
+.calculator-card,
+.cta-box,
+details {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metric-card:hover,
+.benefit-card:hover,
+.calculator-card:hover,
+.cta-box:hover,
+details:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+} 
 }
 
     @media (max-width: 560px) {
