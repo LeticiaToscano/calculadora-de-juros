@@ -1310,71 +1310,55 @@
         font-size: 0.82rem;
       }
     }
-.brand img {
-  height: 90px;
-  width: auto;
-  display: block;
+.brand.brand-logo {
+  display: flex;
+  align-items: center;
 }
 
-@media (max-width: 560px) {
-  .brand img {
-    height: 55px;
-  }
-}
-/* logo modo claro */
-.logo-light {
-  height: 80px;
-}
-
-/* logo modo escuro */
-.logo-dark {
-  height: 95px;
-}
-
-/* garante proporção */
-.brand img {
-  width: auto;
-  display: block;
-}
-
-/* tamanho */
-.brand img {
-  height: 60px;
-  width: auto;
-}
-    /* VISIBILIDADE */
-.logo-light {
-  display: block;
-  height: 80px;
-}
-
-.logo-dark {
+/* esconde tudo por padrão */
+.brand.brand-logo .logo-light,
+.brand.brand-logo .logo-dark {
   display: none;
-  height: 95px;
+  width: auto;
+}
+
+/* tamanhos */
+.brand.brand-logo .logo-light {
+  height: 80px;
+}
+
+.brand.brand-logo .logo-dark {
+  height: 100px;
+}
+
+/* modo claro */
+body:not(.dark-mode) .brand.brand-logo .logo-light {
+  display: block;
 }
 
 /* modo escuro */
-body.dark-mode .logo-light {
-  display: none;
-}
-
-body.dark-mode .logo-dark {
+body.dark-mode .brand.brand-logo .logo-dark {
   display: block;
 }
 
-/* proporção */
-.brand img {
-  width: auto;
-  display: block;
+/* mobile */
+@media (max-width: 560px) {
+  .brand.brand-logo .logo-light {
+    height: 50px;
+  }
+
+  .brand.brand-logo .logo-dark {
+    height: 60px;
+  }
 }
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
-    <a href="#top" class="brand brand-logo">
-  <img src="logo.escura.png" class="logo-light" alt="Seja Livre">
-  <img src="logo.png.png" class="logo-dark" alt="Seja Livre">
+  <a href="#top" class="brand brand-logo" aria-label="Seja Livre Investimentos">
+  <img src="logo.escura.png" class="logo-light" alt="Seja Livre Investimentos">
+  <img src="logo.png.png" class="logo-dark" alt="Seja Livre Investimentos">
 </a>
 
       <nav class="nav">
