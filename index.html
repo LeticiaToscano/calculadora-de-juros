@@ -1342,6 +1342,31 @@
   height: 60px;
   width: auto;
 }
+    /* VISIBILIDADE */
+.logo-light {
+  display: block;
+  height: 80px;
+}
+
+.logo-dark {
+  display: none;
+  height: 95px;
+}
+
+/* modo escuro */
+body.dark-mode .logo-light {
+  display: none;
+}
+
+body.dark-mode .logo-dark {
+  display: block;
+}
+
+/* proporção */
+.brand img {
+  width: auto;
+  display: block;
+}
   </style>
 </head>
 <body>
