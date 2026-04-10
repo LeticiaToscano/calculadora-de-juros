@@ -1532,16 +1532,19 @@ body.dark-mode .brand.brand-logo .logo-dark {
   .brand.brand-logo .logo-dark {
     height: 45px;
   }
-  /* garante que só uma logo apareça */
+.logo-light,
+.logo-dark {
+  position: absolute;
+}
+
 .logo-light {
-  display: block;
+  display: block !important;
 }
 
 .logo-dark {
-  display: none;
+  display: none !important;
 }
 
-/* quando estiver no modo escuro */
 body.dark-mode .logo-light {
   display: none !important;
 }
