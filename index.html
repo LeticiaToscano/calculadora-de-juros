@@ -1304,13 +1304,37 @@
     height: 55px;
   }
 }
+    /* modo claro (padrão) */
+.logo-light {
+  display: block;
+}
+
+.logo-dark {
+  display: none;
+}
+
+/* modo escuro */
+body.dark-mode .logo-light {
+  display: none;
+}
+
+body.dark-mode .logo-dark {
+  display: block;
+}
+
+/* tamanho */
+.brand img {
+  height: 60px;
+  width: auto;
+}
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
-      <a href="#top" class="brand brand-logo" aria-label="Seja Livre Investimentos">
-  <img src="logo.png.png" alt="Seja Livre Investimentos">
+    <a href="#top" class="brand brand-logo">
+  <img src="logo-escura.png" class="logo-light" alt="Seja Livre">
+  <img src="logo.png.png" class="logo-dark" alt="Seja Livre">
 </a>
 
       <nav class="nav">
