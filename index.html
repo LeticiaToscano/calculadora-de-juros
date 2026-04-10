@@ -1929,10 +1929,11 @@ body.dark-mode .brand.brand-logo .logo-dark {
           totalAcumulado: saldo
         });
 
-        labels.push(`${i}`);
-        dataSaldo.push(Number(saldo.toFixed(2)));
-        dataInvestido.push(Number(totalInvestido.toFixed(2)));
-      }
+     if (i % 12 === 0) {
+  labels.push(`${i / 12} anos`);
+  dataSaldo.push(Number(saldo.toFixed(2)));
+  dataInvestido.push(Number(totalInvestido.toFixed(2)));
+}
 
       const jurosGanhos = saldo - totalInvestido;
 
