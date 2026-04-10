@@ -1,3 +1,4 @@
+@@ -1,2106 +1,2106 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -958,11 +959,21 @@
       }
     }
 
-  @media (max-width: 820px) {
+    @media (max-width: 820px) {
+      .nav {
+        display: none;
+      }
+   @media (max-width: 820px) {
   .nav {
     display: none;
   }
 
+      .topbar-inner,
+      .section-header,
+      .footer-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
   .topbar-inner,
   .section-header,
   .footer-row {
@@ -970,16 +981,30 @@
     align-items: stretch;
   }
 
+      .topbar-inner {
+        gap: 10px;
+        padding: 10px 0 12px;
+      }
   .topbar-inner {
     gap: 10px;
     padding: 10px 0 12px;
   }
 
+      .brand {
+        width: 100%;
+        gap: 12px;
+      }
   .brand {
     width: 100%;
     gap: 12px;
   }
 
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+        font-size: 16px;
+      }
   .brand-mark {
     width: 38px;
     height: 38px;
@@ -987,22 +1012,41 @@
     font-size: 16px;
   }
 
+      .brand-text {
+        font-size: 0.98rem;
+        line-height: 1.2;
+      }
   .brand-text {
     font-size: 0.98rem;
     line-height: 1.2;
   }
 
+      .header-actions {
+        width: 100%;
+        gap: 10px;
+      }
   .header-actions {
     width: 100%;
     gap: 10px;
   }
 
+      .header-actions .theme-toggle {
+        width: 50px;
+        min-width: 50px;
+        height: 50px;
+      }
   .header-actions .theme-toggle {
     width: 50px;
     min-width: 50px;
     height: 50px;
   }
 
+      .header-actions .btn {
+        flex: 1;
+        min-height: 50px;
+        border-radius: 16px;
+        font-size: 0.95rem;
+      }
   .header-actions .btn {
     flex: 1;
     min-height: 50px;
@@ -1010,31 +1054,64 @@
     font-size: 0.95rem;
   }
 
+      .hero {
+        padding: 46px 0 26px;
+      }
+.hero {
+  background: linear-gradient(180deg, #020617 0%, #020617 100%);
+}
+      .hero-grid {
+        gap: 22px;
+      }
   .hero {
     padding: 46px 0 26px;
   }
 
+      .hero h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+        max-width: 100%;
+      }
   .hero-grid {
     gap: 22px;
   }
 
+      .hero p {
+        font-size: 0.98rem;
+      }
   .hero h1 {
     font-size: clamp(2rem, 8vw, 3rem);
     max-width: 100%;
   }
 
+      .hero-actions {
+        width: 100%;
+      }
   .hero p {
     font-size: 0.98rem;
   }
 
+      .hero-actions .btn {
+        flex: 1 1 100%;
+      }
   .hero-actions {
     width: 100%;
   }
 
+      .hero-metrics,
+      .calculator-grid,
+      .result-mini-grid,
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
   .hero-actions .btn {
     flex: 1 1 100%;
   }
 
+      .calculator-card,
+      .cta-box,
+      .hero-panel {
+        padding: 22px;
+      }
   .hero-metrics,
   .calculator-grid,
   .result-mini-grid,
@@ -1042,42 +1119,89 @@
     grid-template-columns: 1fr;
   }
 
+      .mini-chart-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
   .calculator-card,
   .cta-box,
   .hero-panel {
     padding: 22px;
   }
 
+      .badge-positive {
+        white-space: normal;
+      }
   .mini-chart-header {
     flex-direction: column;
     align-items: flex-start;
   }
 
+      .growth-bars {
+        height: 180px;
+        padding: 14px;
+      }
   .badge-positive {
     white-space: normal;
   }
 
+      .panel-stats {
+        grid-template-columns: 1fr;
+      }
   .growth-bars {
     height: 180px;
     padding: 14px;
   }
 
+      .compound-wrap select {
+        max-width: 120px;
+      }
   .panel-stats {
     grid-template-columns: 1fr;
   }
 
+      .results {
+        gap: 14px;
+      }
   .compound-wrap select {
     max-width: 120px;
   }
 
+      .result-row {
+        gap: 12px;
+      }
   .results {
     gap: 14px;
   }
 
+      .cta-box h2 {
+        max-width: 100%;
+      }
   .result-row {
     gap: 12px;
   }
 
+      .chart-wrap {
+        height: 300px;
+      }
+    .hero-grid > div:first-child {
+background: linear-gradient(
+  135deg,
+  rgba(10, 25, 20, 0.96) 0%,
+  rgba(8, 22, 18, 0.95) 75%,
+  rgba(16, 185, 129, 0.18) 100%
+);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+box-shadow:
+  0 20px 50px rgba(0, 0, 0, 0.35),
+  0 0 0 1px rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  padding: 22px 18px;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(59, 130, 246, 0.15);
+}
   .cta-box h2 {
     max-width: 100%;
   }
@@ -1086,11 +1210,17 @@
     height: 300px;
   }
 
+.hero h1 {
+  margin-bottom: 14px;
+}
   /* AJUSTES SOMENTE PARA O MODO ESCURO */
   body.dark-mode .hero {
     background: linear-gradient(180deg, #020617 0%, #020617 100%);
   }
 
+.hero p {
+  margin-bottom: 14px;
+}
   body.dark-mode .hero-grid > div:first-child {
     background: linear-gradient(
       135deg,
@@ -1106,6 +1236,12 @@
       0 0 0 1px rgba(59, 130, 246, 0.15);
   }
 
+.hero-actions {
+  margin-top: 16px;
+}
+    .hero-badge {
+  display: none;
+}  
   body.dark-mode .hero h1 {
     margin-bottom: 14px;
   }
@@ -1121,49 +1257,6 @@
   body.dark-mode .eyebrow {
     display: none;
   }
-   /* ===== ANIMAÇÃO SUAVE E SEGURA ===== */
-@keyframes softFadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* aplica só nos elementos principais */
-.hero-panel,
-.metric-card,
-.benefit-card,
-.calculator-card,
-.result-main,
-.result-breakdown,
-.chart-card,
-.table-card,
-.cta-box,
-details {
-  animation: softFadeUp 0.4s ease both;
-}
-
-/* hover leve */
-.metric-card,
-.benefit-card,
-.calculator-card,
-.cta-box,
-details {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.metric-card:hover,
-.benefit-card:hover,
-.calculator-card:hover,
-.cta-box:hover,
-details:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
-} 
 }
 
     @media (max-width: 560px) {
@@ -1440,119 +1533,6 @@ body.dark-mode .brand.brand-logo .logo-dark {
   .brand.brand-logo .logo-dark {
     height: 45px;
   }
-  /* animação de entrada */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* animação base */
-.animate-fade-up {
-  opacity: 0;
-  animation: fadeUp 0.7s ease forwards;
-}
-
-/* delays */
-.delay-1 { animation-delay: 0.05s; }
-.delay-2 { animation-delay: 0.12s; }
-.delay-3 { animation-delay: 0.18s; }
-.delay-4 { animation-delay: 0.24s; }
-
-/* hover elegante */
-.metric-card,
-.benefit-card,
-.result-main,
-.result-breakdown,
-.chart-card,
-.table-card,
-.cta-box,
-details,
-.hero-panel,
-.hero-grid > div:first-child {
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-
-.metric-card:hover,
-.benefit-card:hover,
-.result-main:hover,
-.result-breakdown:hover,
-.chart-card:hover,
-.table-card:hover,
-.cta-box:hover,
-details:hover,
-.hero-panel:hover,
-.hero-grid > div:first-child:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 24px 50px rgba(16, 24, 40, 0.12);
-}
-
-/* respeita usuários que preferem menos animação */
-@media (prefers-reduced-motion: reduce) {
-  .animate-fade-up {
-    opacity: 1;
-    animation: none;
-  }
-
-  .metric-card,
-  .benefit-card,
-  .result-main,
-  .result-breakdown,
-  .chart-card,
-  .table-card,
-  .cta-box,
-  details,
-  .hero-panel,
-  .hero-grid > div:first-child {
-    transition: none;
-  }
-/* animação de entrada */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* só aplica se NÃO tiver animação manual */
-.hero-grid > div:not(.animate-fade-up),
-.metric-card:not(.animate-fade-up),
-.benefits-grid > *:not(.animate-fade-up),
-.calculator-card:not(.animate-fade-up),
-.cta-box:not(.animate-fade-up),
-.panel-stats > *:not(.animate-fade-up),
-.results > *:not(.animate-fade-up),
-details:not(.animate-fade-up) {
-  opacity: 0;
-  animation: fadeUp 0.7s ease forwards;
-}
-
-/* hover premium */
-.metric-card,
-.benefits-grid > *,
-.calculator-card,
-.cta-box,
-details {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.metric-card:hover,
-.benefits-grid > *:hover,
-.calculator-card:hover,
-.cta-box:hover,
-details:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 24px 50px rgba(16, 24, 40, 0.12);
-}
 }
   </style>
 </head>
@@ -1579,7 +1559,7 @@ details:hover {
 
   <main id="top">
     <section class="hero">
-      <div class="animate-fade-up">
+      <div class="container hero-grid">
         <div>
           <div class="eyebrow">Simulador prático para entender o potencial dos juros compostos</div>
           <h1>Descubra como seu dinheiro pode evoluir com aportes, tempo e juros compostos.</h1>
@@ -1596,22 +1576,22 @@ details:hover {
           </div>
 
           <div class="hero-metrics">
-          <div class="metric-card animate-fade-up delay-1">
+            <div class="metric-card">
               <strong>Simulação rápida</strong>
               <span>Preencha os campos e veja em segundos uma projeção clara do seu capital.</span>
             </div>
-          <div class="metric-card animate-fade-up delay-2">
+            <div class="metric-card">
               <strong>Visão de longo prazo</strong>
               <span>Entenda como o tempo e a constância podem impactar seu patrimônio.</span>
             </div>
-           <div class="metric-card animate-fade-up delay-3">
+            <div class="metric-card">
               <strong>Cenários personalizados</strong>
               <span>Teste aportes, juros e retiradas de acordo com sua realidade.</span>
             </div>
           </div>
         </div>
 
-      <div class="hero-panel animate-fade-up delay-1">
+        <div class="hero-panel">
           <div class="mini-chart">
             <div class="mini-chart-header">
               <div>
@@ -1819,20 +1799,19 @@ details:hover {
         </div>
 
         <div class="benefits-grid">
-        <article class="benefit-card animate-fade-up delay-1">
-
+          <article class="benefit-card">
             <div class="benefit-icon">01</div>
             <h3>Informe o valor inicial</h3>
             <p>Digite quanto você já tem disponível para começar. Esse será o capital base da sua simulação.</p>
           </article>
 
-          <article class="benefit-card animate-fade-up delay-2">
+          <article class="benefit-card">
             <div class="benefit-icon">02</div>
             <h3>Defina o aporte mensal</h3>
             <p>Preencha quanto pretende investir por mês para ver o impacto da constância no longo prazo.</p>
           </article>
 
-          <article class="benefit-card animate-fade-up delay-3">
+          <article class="benefit-card">
             <div class="benefit-icon">03</div>
             <h3>Escolha a taxa e o período</h3>
             <p>Selecione a taxa de juros e o prazo da simulação para descobrir como o capital pode evoluir ao longo do tempo.</p>
@@ -1840,19 +1819,19 @@ details:hover {
         </div>
 
         <div class="benefits-grid" style="margin-top: 18px;">
-          <article class="benefit-card animate-fade-up delay-1">
+          <article class="benefit-card">
             <div class="benefit-icon">04</div>
             <h3>Ative retiradas, se quiser</h3>
             <p>Você também pode simular retiradas mensais para entender cenários de uso do patrimônio ou renda passiva.</p>
           </article>
 
-          <article class="benefit-card animate-fade-up delay-2">
+          <article class="benefit-card">
             <div class="benefit-icon">05</div>
             <h3>Analise o gráfico</h3>
             <p>Depois do cálculo, veja a curva de crescimento para comparar total investido e valor total acumulado.</p>
           </article>
 
-          <article class="benefit-card animate-fade-up delay-3">
+          <article class="benefit-card">
             <div class="benefit-icon">06</div>
             <h3>Confira a tabela mês a mês</h3>
             <p>Acompanhe a evolução detalhada da simulação em uma tabela completa, com juros, investido e acumulado em cada mês.</p>
