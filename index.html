@@ -142,13 +142,30 @@
   width: auto;
   display: block;
 }
-
 @media (max-width: 560px) {
-  .brand-logo img {
-    height: 34px;
+  .logo-light {
+    height: 50px;
+  }
+
+  .logo-dark {
+    height: 60px;
   }
 }
+/* logo modo claro */
+.logo-light {
+  height: 80px;
+}
 
+/* logo modo escuro */
+.logo-dark {
+  height: 95px;
+}
+
+/* garante proporção */
+.brand img {
+  width: auto;
+  display: block;
+}
     .nav {
       display: flex;
       align-items: center;
@@ -1304,21 +1321,19 @@
     height: 55px;
   }
 }
-    /* modo claro (padrão) */
+/* logo modo claro */
 .logo-light {
-  display: block;
+  height: 80px;
 }
 
+/* logo modo escuro */
 .logo-dark {
-  display: none;
+  height: 95px;
 }
 
-/* modo escuro */
-body.dark-mode .logo-light {
-  display: none;
-}
-
-body.dark-mode .logo-dark {
+/* garante proporção */
+.brand img {
+  width: auto;
   display: block;
 }
 
