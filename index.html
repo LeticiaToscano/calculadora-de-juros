@@ -1073,20 +1073,46 @@
         height: 300px;
       }
 
-     body.dark-mode .hero-grid > div:first-child {
+body.dark-mode .hero-grid > div:first-child {
+  position: relative;
   background: linear-gradient(
     135deg,
     rgba(10, 25, 20, 0.96) 0%,
     rgba(8, 22, 18, 0.95) 75%,
-    rgba(16, 185, 129, 0.18) 100%
+    rgba(16, 185, 129, 0.12) 100%
   );
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 24px;
   padding: 22px 18px;
+  overflow: hidden;
+
   box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.35),
-    0 0 0 1px rgba(59, 130, 246, 0.15);
+    0 20px 50px rgba(0, 0, 0, 0.45),
+    0 0 40px rgba(16, 185, 129, 0.15);
 }
+body.dark-mode .hero-grid > div:first-child::before {
+  content: "";
+  position: absolute;
+  inset: auto -60px -60px auto;
+
+  width: 220px;
+  height: 220px;
+
+  background: radial-gradient(
+    circle,
+    rgba(16, 185, 129, 0.35) 0%,
+    rgba(16, 185, 129, 0.15) 40%,
+    transparent 70%
+  );
+
+  filter: blur(40px);
+  z-index: 0;
+}
+      body.dark-mode .hero-grid > div:first-child > * {
+  position: relative;
+  z-index: 1;
+}
+    }
 
       body.dark-mode .hero {
         background: linear-gradient(180deg, #020617 0%, #020617 100%);
